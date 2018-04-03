@@ -1,0 +1,19 @@
+#home-text, #home-image {
+	padding: 20px;
+}
+
+h1 {
+	font-size: 1.2em;
+	text-align: center;
+	padding: 20px 0;
+}
+
+p {
+	font-size: 0.9em;
+	margin: 0 20px;
+}
+
+.small {
+	margin-top: 20px;
+	font-size: 0.7em;
+}

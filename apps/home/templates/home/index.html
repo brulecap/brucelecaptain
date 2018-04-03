@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bruce LeCaptain</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% load static %}
+		<link rel="stylesheet" href="{%static '/home/css/styles.css'%}">
+		<link rel="stylesheet" href="{%static '/home/css/home.css'%}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+{% include "home/nav.html" %}
+		<div class="container-fluid">
+			<div class="row">
+				<div id="home-text" class="col-sm-12 col-md-4">
+					<h1>Welcome to Bruce!</h1>
+					<p>The picture? That's me after writing an elegant piece of code. It always puts a smile on my face and makes me want to drive a few thousand miles, find a sign with my name on it, and take a selfie. Doesn't it have the same affect on you? <span class="large">:)</span></p>
+					<p class="small">Okay, so your not buying all of that... The real story can be found <a href="#">here</a>.</p>
+				</div>
+				<div id="home-image" class="col-md-8">
+					<img class="img-fluid" src="{%static 'home/images/bruceinbrucenew.jpg'%}" alt="Bruce">
+				</div>
+			</div>
+		</div>
+{% include "home/footer.html" %}
+	</body>
+</html>
