@@ -6,15 +6,40 @@
 			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 {% load static %}
 		<link rel="stylesheet" href="{%static '/home/css/styles.css'%}">
+		<link rel="stylesheet" href="{%static '/home/css/modal.css'%}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 {% include "home/nav.html" %}
-		<div class="page">
-			<div class="container">
-				<p>Contact info</p>
+		<div class="container-fluid">
+{% include "home/header.html" %}
+			<div class="row">
+				<div id="home-text" class="col-sm-12 col-md-5">
+					<p>Me and my 3 children outside my stable in West Tanfield, North Yorkshire, England.</p>
+					<p>Not buying that one either? Okay... Click on the picture to get the real story!</p>
+					<p>If you have comments, questions, or just want to say hey, you can reach out in a number of ways:</p>
+					<ul>
+						<li>Email me at <a href="mailto:brulecap@gmail.com">brulecap@gmail.com</a></li>
+						<li><a href="https://github.com/brulecap" target="_blank">GitHub</a></li>
+						<li><a href="https://www.linkedin.com/in/bruce-lecaptain-533a8241/" target="_blank">Linked In</a></li>
+					</ul>
+				</div>
+				<div id="home-image" class="col-md-7">
+					<img id="myImg" src="{%static 'home/images/bruces_arms2.jpg'%}" alt="Bruce Arms">
+					<div id="myModal" class="modal">
+						<!-- The Close Button -->
+						<span class="close">&times;</span>
+						<!-- Modal Content (The Image) -->
+						<img class="modal-content" id="img01" src="{%static 'home/images/bruces_arms2.jpg'%}">
+						<!-- Modal Caption (Image Text) -->
+						<div id="caption">
+							<p>Bruce Arms Stable is in West Tanfield, North Yorkshire, England but unfortunately it is not mine. We drove past here a number of times on our trips around the North Yorkshire countryside. And, yep, one day I had to stop and get a picture. The picture was taken in 2000. One of the stuffed animal puppets my daughters, wearing pink and purple, are holding is still alive and well loved.</p> 
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 {% include "home/footer.html" %}
+<script src="{%static '/home/js/modal.js'%}"></script>
 	</body>
 </html>

@@ -6,23 +6,34 @@
 			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 {% load static %}
 		<link rel="stylesheet" href="{%static '/home/css/styles.css'%}">
-		<link rel="stylesheet" href="{%static '/home/css/home.css'%}">
+		<link rel="stylesheet" href="{%static '/home/css/modal.css'%}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 {% include "home/nav.html" %}
 		<div class="container-fluid">
+{% include "home/header.html" %}
 			<div class="row">
-				<div id="home-text" class="col-sm-12 col-md-4">
-					<h1>Welcome to Bruce!</h1>
-					<p>The picture? That's me after writing an elegant piece of code. It always puts a smile on my face and makes me want to drive a few thousand miles, find a sign with my name on it, and take a selfie. Doesn't it have the same affect on you? <span class="large">:)</span></p>
-					<p class="small">Okay, so your not buying all of that... The real story can be found <a href="#">here</a>.</p>
+				<div id="home-text" class="col-sm-12 col-md-5">
+					<p>This picture? That's me, Bruce LeCaptain, after writing an elegant piece of code. It always puts a smile on my face and makes me want to drive a few thousand miles, find a sign with my name on it, and take a selfie. Doesn't it have the same affect on you? <span class="large">:)</span></p>
+					<p>Okay, so your not buying all of that... Click on the picture for the real story.</p>
 				</div>
-				<div id="home-image" class="col-md-8">
-					<img class="img-fluid" src="{%static 'home/images/bruceinbrucenew.jpg'%}" alt="Bruce">
+				<div id="home-image" class="col-md-7">
+					<img id="myImg" src="{%static 'home/images/bruceinbrucenew.jpg'%}" alt="Bruce">
+					<div id="myModal" class="modal">
+						<!-- The Close Button -->
+						<span class="close">&times;</span>
+						<!-- Modal Content (The Image) -->
+						<img class="modal-content" id="img01" src="{%static 'home/images/bruceinbruce.jpg'%}" alt="Bruce Wisconsin">
+						<!-- Modal Caption (Image Text) -->
+						<div id="caption">
+							<p>I had just spent a week in Montana/Wyoming visiting relatives and spending time at my little peace of heaven, East Rosebud Lake in Montana. I was travelling back to Virginia with a side trip to Ingram Day's where I was going to see my brother, sister, and my old as dirt father. My daughter had suggested taking a selfie in every state I visitied. I saw this sign and what better selfie to take in Wisconsin? I was quite chuffed with myself, thus the grin.</p> 
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 {% include "home/footer.html" %}
+<script src="{%static '/home/js/modal.js'%}"></script>
 	</body>
 </html>

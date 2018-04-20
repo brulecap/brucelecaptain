@@ -1,23 +1,64 @@
-<!DOCTYPE html>
 <html>
 	<head>
-		<title>Bruce's Code/Portfolio'</title>
+		<title>Bruce LeCaptain</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 {% load static %}
 		<link rel="stylesheet" href="{%static '/home/css/styles.css'%}">
-		<link rel="stylesheet" href="{%static '/home/css/code.css'%}">
+		<link rel="stylesheet" href="{%static '/home/css/modal.css'%}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 {% include "home/nav.html" %}
-		<div class="page">
-			<div class="container-fluid">
-				<div class="row">
-					<p>About</p>
+		<div class="container-fluid">
+{% include "home/header.html" %}
+			<div class="row">
+				<div id="home-text" class="col-sm-12 col-md-8">
+					<p>I recently completed Coding Dojo's online bootcamp completing the Python and MEAN stacks. My main purpse in doing this was to give myself confidence so I can get a real job and rock the interview. I have a case of "Imposter Syndrome". Once I get to know you, I can be a pretty confident person, ask my wife. But doing an interview... Yeah, I fall apart.</p>
+					<p>A glimpse of my resume follows:</p>
+					<h2>Education</h2>
+					<ul>
+						<li>Rocky Mountain College, Billings MT - BS Mathematics - 1996</li>
+						<li>Montana State Universty, Bozeman, MT - MS Mathematics - 1998</li>
+						<li>Coding Dojo Online Bootcamp - MEAN stcak and Python Stack - 2018</li>
+					</ul>
+					<h2>Work History</h2>
+					<ul>
+						<li>Raytheon, Garland TX, Denver, CO, and Harrogate, England - 1998 - 2002</li>
+						<ul>
+							<li>Supported develpment and maintenance of a real time command and control system</li>
+							<li>Mainly developed in C on DEC OpenVMS. Maintenance work was performed mainly in C, Fortran, Pascal on various operating systems to include OpenVMS, Solaris and Linux.</li>
+						</ul>
+						<li>Technology Management Associates, Fairfax, VA - 2002 - 2005</li>
+						<ul>
+							<li>Supported development, maintenance, and site installation of real time system.</li>
+							<li>Mainly worked with C and Java on Sun Solaris and Linux.</li>
+						</ul>
+						<li>European Tableware, Haymarket, Va - 2005-2017</li>
+						<ul>
+							<li>Developed an eCommerce application using osCommerce in a LAMP stack</li>
+							<li>"Retired" version can be seen <a href="http://retired.europeantableware.com" target="_blank">here</a></li>
+						</ul>
+					</ul>
+					<p>A full version of my resume can be downloaded from <a href="{%static '/home/documents/Bruce LeCaptain_Resume_20180116.docx'%}">here</a></p>
+					<p>My daughter took the picture while hiking in George Washington National Forest. I had no idea I was looking that good that day!</p>
+				</div>
+				<div id="home-image" class="col-md-4">
+					<img id="myImg" src="{%static 'home/images/bruce_hiking.png'%}" alt="Bruce Hiking">
+					<div id="myModal" class="modal">
+						<!-- The Close Button -->
+						<span class="close">&times;</span>
+						<!-- Modal Content (The Image) -->
+						<img class="modal-content" id="img01" src="{%static 'home/images/bruce_hiking.png'%}" alt="Bruce Hiking">>
+						<!-- Modal Caption (Image Text) -->
+						<div id="caption">
+							<p>Hiking with my daughter in George Washington National Forest. I had no idea I was looking that good that day!</p> 
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 {% include "home/footer.html" %}
+<script src="{%static '/home/js/modal.js'%}"></script>
 	</body>
 </html>

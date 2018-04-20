@@ -12,6 +12,7 @@
 	<body>
 {% include "home/nav.html" %}
 		<div class="container-fluid">
+{% include "home/header.html" %}
 			<div class="row">
 				<div class="code-item col-sm-6 col-md-4 col-6">
 					<h2>Welcome to Bruce</h2>
@@ -19,11 +20,11 @@
 					<div class="detail">
 						<p>This website is one example of my work. It is my first foray into CSS Bootstrap responsive design. Cool stuff! Yeah, I say that about every new technology I learn!</p>
 						<p>It's built using Django on the backend.</p>
-						<a class="close-about" href=#>Close</a>
+						<a class="close-about" href="#">Close</a>
 					</div>
 					<div class="links">
 						<a class="about" href="#">About</a>
-						<a href="#">Need to add githun repisitory</a>
+						<a href="https://github.com/brulecap/brucelecaptain" target="_blank">GitHub Repo</a>
 					</div>
 				</div>
 				<div class="code-item col-sm-6 col-md-4 col-6">
@@ -32,19 +33,30 @@
 					<div class="detail">
 						<p>Pacman was a lot of fun to develop. It is a long way from finished but I think it's pretty cool. Give it try. Bring up a separate version in an incognito tab.</p>
 						<p>It is JavaScript/jQuery on the client side using socket.io to send and receive information from an Express server.</p>
-						<a class="close-about" href=#>Close</a>
+						<a class="close-about" href="#">Close</a>
 					</div>
 					<div class="links">
 						<a class="about" href="#">About</a>
 						<a href="/pacman">Play</a>
-						<a href="https://github.com/brulecap/pacman">GitHub Repo</a>
+						<a href="https://github.com/brulecap/pacman" target="_blank">GitHub Repo</a>
 					</div>
 				</div>
 				<div class="code-item col-sm-6 col-md-4 col-6">
-					<p>Code 3</p>
+					<h2>EUropean Tableware</h2>
+					<img class="img-fluid" src="{%static 'home/images/et_logo.png'%}">
+					<div class="detail">
+						<p>My wife and I started European Tableware in 2006. It was an interesting ride, but with the changing eCommerce landscape we shut it down in 2017.</p>
+						<p>It was originally developed on osCommerce in a LAMP stack. After multiple iterations, the final version is mainly my own with just a few hooks left from osCommerce.</p>
+						<a class="close-about" href="#">Close</a>
+					</div>
+					<div class="links">
+						<a class="about" href="#">About</a>
+						<a href="http://retired.europeantableware.com" target="_blank">Visit</a>
+						<a href="https://github.com/brulecap/europeantableware" target="_blank">GitHub Repo</a>
+					</div>
 				</div>
 				<div class="code-item col-sm-6 col-md-4 col-6">
-					<p>Code 4</p>
+					<p>More coming soon!</p>
 				</div>
 			</div>
 		</div>
