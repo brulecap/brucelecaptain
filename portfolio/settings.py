@@ -25,7 +25,7 @@ SECRET_KEY = 'lt5e=$xzo4$rf7nf(+wqglp9cg1z$r*imu+zg_$=gmpn4^bvds'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['18.188.163.162']
+ALLOWED_HOSTS = ['18.188.163.162','brucelecaptain.com']
 
 
 # Application definition
