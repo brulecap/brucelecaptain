@@ -9,16 +9,39 @@
 {% include "home/nav.html" %}
 		<div class="container-fluid">
 {% include "home/header.html" %}
+			<div class="bruce_detail detail">
+				<span class="close">&times;</span>
+				<img class="img-fluid" src="{%static 'home/images/bruce_sign.png'%}" alt="Bruce">
+				<p>This website is one example of my work. It is my first foray into CSS Bootstrap responsive design.</p>
+				<p>It's is based on Django. Why Django? At this point it is mainly a collection of static pages. No need for Django, but it does give me the versatility to add some dynamic content in the future.</p>
+				<p>When I wanted to serve my website using SSL
+			</div>
+			<div class="pacman_detail detail">
+				<span class="close">&times;</span>
+				<img class="img-fluid" src="{%static 'home/images/pacmanscreen.png'%}"  alt="Pacman">
+				<p>I started developing this while going through Coding Dojo's Web Fundamentals course. There was a video walk-through giving insight on the development process using Pacman as an example. I paused the video early on and started developing the app on my own. I wanted to see how my solution compared to the instructors. When I had some good bones in place, I went back and looked at the instructors solution. My solution diverged from his pretty quickly. I think mine is better of course.</p>
+				<p>Give it try. Bring up a separate version in an incognito tab to have multiple sessions.</p>
+					<p>It is JavaScript/jQuery on the client side using socket.io to send and receive information to/from an Express server. The nginx server (serving the website brucelecaptain.com) is configured to do a proxy_pass to an Express server, listening on localhost port 8080, when a request is made to /pacman or /socket.io.</p>
+			</div>
+			<div class="et_detail detail">
+				<span class="close">&times;</span>
+				<img class="img-fluid" src="{%static 'home/images/et_logo.png'%}"  alt="European Tableware">
+				<p>My wife and I started European Tableware in 2006. It was an interesting ride, but with the changing e-commerce landscape, we shut it down in 2017.</p>
+				<p>It was originally developed on osCommerce in a LAMP stack. After multiple iterations, the final version is mainly my own with just a few hooks left from osCommerce.</p>
+			</div>
+			<div class="authors_detail detail">
+				<span class="close">&times;</span>
+				<img class="img-fluid" src="{%static 'home/images/stephen_king.jpg'%}" alt="Stephen King">
+				<p>Authors is a full MEAN stack application originally developed as an excercise while I was in Coding Dojo's online bootcamp.</p>
+				<p>Deploying the app to brucelecaptain.com was a good learning experience. As with Pacman, I have an nginx server doing a proxy pass to a node server. It worked beautifully in development, but when deployed the node routing fell apart. Figuring out the problems gave me a greater understanding of node routing of an Angular app, and how to have a single version of software "work" in different environments.</p> 
+				<p>Documentation of the API can be found <a href="https://github.com/brulecap/authors/blob/master/books_api_documentation.txt">here</a>. A sample author class can be found <a href="https://github.com/brulecap/authors/blob/master/src/app/author.ts">here</a>.</p>
+				<p>If this was a "real" production API, I would want to control access to the http post, put, and delete methods. This would require https and some form of validation, either requiring a key or a login.</p>
+			</div>
 			<div class="row">
 				<div class="code-item col-sm-6 col-md-4 col-6">
 					<h2>Welcome to Bruce</h2>
 					<img class="img-fluid" src="{%static 'home/images/bruce_sign.png'%}" alt="Bruce">
-					<div class="detail">
-						<p>This website is one example of my work. It is my first foray into CSS Bootstrap responsive design.</p>
-						<p>It's is based on Django. Why Django? At this point it is mainly a collection of static pages. No need for Django, but it does give me the versatility to add some dynamic content in the future.</p>
-						<a class="close-about" href="#">Close</a>
-					</div>
-					<div class="links">
+					<div id="bruce" class="links">
 						<a class="about" href="#">About</a>
 						<a href="https://github.com/brulecap/brucelecaptain" target="_blank">GitHub</a>
 					</div>
@@ -26,13 +49,7 @@
 				<div class="code-item col-sm-6 col-md-4 col-6">
 					<h2>Pacman</h2>
 					<img class="img-fluid" src="{%static 'home/images/pacmanscreen.png'%}"  alt="Pacman">
-					<div class="detail">
-						<p>I started developing this while going through Coding Dojo's Web Fundamentals course. There was a video walk-through giving insight on the development process using Pacman as an example. I paused the video early on and started developing the app on my own. I wanted to see how my solution compared to the instructors. When I had some good bones in place, I went back and looked at the instructors solution. My solution diverged from his pretty quickly. I think mine is better of course.</p>
-						<p>Give it try. Bring up a separate version in an incognito tab to have multiple sessions.</p>
-						<p>It is JavaScript/jQuery on the client side using socket.io to send and receive information to/from an Express server. The nginx server (serving the website brucelecaptain.com) is configured to do a proxy_pass to an Express server, listening on localhost port 8080, when a request is made to /pacman or /socket.io.</p>
-						<a class="close-about" href="#">Close</a>
-					</div>
-					<div class="links">
+					<div id="pacman" class="links">
 						<a class="about" href="#">About</a>
 						<a href="/pacman">Play</a>
 						<a href="https://github.com/brulecap/pacman" target="_blank">GitHub</a>
@@ -41,31 +58,18 @@
 				<div class="code-item col-sm-6 col-md-4 col-6">
 					<h2>European Tableware</h2>
 					<img class="img-fluid" src="{%static 'home/images/et_logo.png'%}"  alt="European Tableware">
-					<div class="detail">
-						<p>My wife and I started European Tableware in 2006. It was an interesting ride, but with the changing e-commerce landscape, we shut it down in 2017.</p>
-						<p>It was originally developed on osCommerce in a LAMP stack. After multiple iterations, the final version is mainly my own with just a few hooks left from osCommerce.</p>
-						<a class="close-about" href="#">Close</a>
-					</div>
-					<div class="links">
+					<div  id="et" class="links">
 						<a class="about" href="#">About</a>
 						<a href="http://retired.europeantableware.com" target="_blank">Visit</a>
 					</div>
 				</div>
-				<div class="code-item col-sm-6 col-md-4 col-6">
+				<div class=code-item col-sm-6 col-md-4 col-6">
 					<h2>Authors MEAN App</h2>
 					<img class="img-fluid" src="{%static 'home/images/stephen_king.jpg'%}" alt="Stephen King">
-					<div class="detail">
-						<p>Authors is a full MEAN stack application originally developed as an excercise while I was in Coding Dojo's online bootcamp.</p>
-						<p>Deploying the app to brucelecaptain.com was a good learning experience. As with Pacman, I have an nginx server doing a proxy pass to a node server. It worked beautifully in development, but when deployed the node routing fell apart. Figuring out the problems gave me a greater understanding of node routing of an Angular app, and how to have a single version of software "work" in different environments.</p> 
-						<p>Documentation of the API can be found <a href="https://github.com/brulecap/authors/blob/master/books_api_documentation.txt">here</a>. A sample author class can be found <a href="https://github.com/brulecap/authors/blob/master/src/app/author.ts">here</a>.</p>
-						<p>If this was a "real" production API, I would want to control access to the http post, put, and delete methods. This would require https and some form of validation, either requiring a key or a login.</p>
-						<a class="close-about" href="#">Close</a>
-					</div>
-					<div class="links">
+					<div id="authors" class="links">
 						<a class="about" href="#">About</a>
 						<a href="/authors">Visit</a>
 					</div>
-
 				</div>
 			</div>
 		</div>
