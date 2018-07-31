@@ -64,3 +64,13 @@ h2 {
 p {
 	font-size: 1.0em;
 }
+
+.quote {
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+.source {
+	color: #0A64A4;
+	font-weight: bold;
+}

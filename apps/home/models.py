@@ -1,3 +1,6 @@
-from django.db import models
+# app brucelecaptain models.py
+from mongoengine import *
 
-# Create your models here.
+class Quotes(Document):
+	quote = StringField()
+	source = StringField()

@@ -1,7 +1,10 @@
 			<div class="row header">
-				<div>
-					<h1>You've Arrived At</h1>
+				<div class="col-4">
 {% load static %}
 					<img src="{%static 'home/images/bruce_sign.png'%}" alt="Bruce Sign">
+				</div>
+				<div class="col-8 align-middle my-auto">
+					<p class="quote">{{quote}}</p>
+					<p class="source">{{source}}</p>
 				</div>
 			</div>
