@@ -1,4 +1,4 @@
-"Computers are useless. They can only give you answers."
+﻿"Computers are useless. They can only give you answers."
 (Pablo Picasso)
 "Computers are like bikinis. They save people a lot of guesswork."
 (Sam Ewing) 
@@ -29,7 +29,7 @@
 "There are two major products that come out of Berkeley: LSD and UNIX. We don't believe this to be a coincidence."
 (Jeremy S. Anderson)
 "19 Jan 2038 at 3:14:07 AM"
-(End of the word according to Unix�2^32 seconds after January 1, 1970) 
+(End of the word according to Unix–2^32 seconds after January 1, 1970) 
 "Every operating system out there is about equal... We all suck."
 (Microsoft senior vice president Brian Valentine describing the state of the art in OS security, 2003)
 "Microsoft has a new version out, Windows XP, which according to everybody is the 'most reliable Windows ever'. To me, this is like saying that asparagus is 'the most articulate vegetable ever.'"
