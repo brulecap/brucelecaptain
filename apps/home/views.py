@@ -7,17 +7,14 @@ num_quotes = len(Quotes.objects)
 
 APP_NAME = 'home'
 
-def index(request):
-	which_quote = random.randint(1,num_quotes + 1)
-	return render(request, APP_NAME + '/index.html', {"home":True, "quote":Quotes.objects[which_quote].quote, "source": Quotes.objects[which_quote].source})
 def about(request):
-	which_quote = random.randint(1,num_quotes + 1)
-	return render(request, APP_NAME + '/about.html', {"about":True, "quote":Quotes.objects[which_quote].quote, "source": Quotes.objects[which_quote].source});
+	which_quote = random.randint(1,num_quotes)
+	return render(request, APP_NAME + '/about.html', {"home":True, "quote":Quotes.objects[which_quote].quote, "source": Quotes.objects[which_quote].source});
 def contact(request):
-	which_quote = random.randint(1,num_quotes + 1)
+	which_quote = random.randint(1,num_quotes)
 	return render(request, APP_NAME + '/contact.html', {"contact":True, "quote":Quotes.objects[which_quote].quote, "source": Quotes.objects[which_quote].source});
 def code(request):
-	which_quote = random.randint(1,num_quotes + 1)
+	which_quote = random.randint(1,num_quotes)
 	return render(request, APP_NAME + '/code.html', {"code":True, "quote":Quotes.objects[which_quote].quote, "source": Quotes.objects[which_quote].source});
 def pacman(request):
 	return render(request, APP_NAME + '/pacman_shell.html');
