@@ -20,6 +20,7 @@ h2 {
 .container-fluid {
 	margin: 0 0 0 60px;
 	padding: 0;
+	width: 95%;
 	min-width: 535px;
 
 }
@@ -65,12 +66,57 @@ p {
 	font-size: 1.0em;
 }
 
-.quote {
+#quote {
 	font-style: italic;
 	margin-bottom: 0;
 }
 
-.source {
+#source {
 	color: #15784d;
 	font-weight: bold;
+}
+
+.angles {
+	display: inline-block;
+	width: 12%;
+}
+
+.angles i {
+	color: white;
+	font-size: 2.5em;
+}
+
+.fa-angle-left:before {
+	text-align: left;
+}
+
+.fa-angle-right:before {
+	text-align: right
+}
+
+.fa-angle-left:before, .fa-angle-right:before {
+	color: white;
+	opacity: .5;
+}
+
+.fa-angle-left:hover:before, .fa-angle-right:hover:before {
+	opacity: 0;
+}
+
+.fa-angle-left:hover:after, .fa-angle-right:hover:after {
+	opacity: .5;
+	bottom: 3em;
+}
+
+.fa-angle-left:after {
+	content: 'Previous';
+}
+
+.fa-angle-right:after {
+	content: 'Next';
+}
+
+#quote_source {
+	display: inline-block;
+	width: 70%;
 }

@@ -12,8 +12,7 @@
 			<div class="bruce_detail detail">
 				<span class="close">&times;</span>
 				<img class="img-fluid" src="{%static 'home/images/bruce_sign.png'%}" alt="Bruce">
-				<p>This website is one example of my work. It is my first foray into CSS Bootstrap responsive design.</p>
-				<p>It's is based on Django. Why Django? At this point it is mainly a collection of static pages. No need for Django, but it does give me the versatility to add some dynamic content in the future.</p>
+				<p>This website is one example of my work. It is a Django application integrated with MongoDB on the backend. When I learned Django, MySQL was used in the course. I considered this when developing my site, but I already had a Mongo database for my authors application. So I integrated my site with Mongo. I was surprised how easy that was.</p>
 			</div>
 			<div class="pacman_detail detail">
 				<span class="close">&times;</span>
@@ -32,7 +31,7 @@
 				<img class="img-fluid" src="{%static 'home/images/stephen_king.jpg'%}" alt="Stephen King">
 				<p>Authors is a full MEAN stack application originally developed as an excercise while I was in Coding Dojo's online bootcamp.</p>
 				<p>Deploying the app to brucelecaptain.com was a good learning experience. As with Pacman, I have an nginx server doing a proxy pass to a node server. It worked beautifully in development, but when deployed the node routing fell apart. Figuring out the problems gave me a greater understanding of node routing of an Angular app, and how to have a single version of software "work" in different environments.</p> 
-				<p>Documentation of the API can be found <a href="https://github.com/brulecap/authors/blob/master/books_api_documentation.txt">here</a>. A sample author class can be found <a href="https://github.com/brulecap/authors/blob/master/src/app/author.ts">here</a>.</p>
+				<p>Documentation of the API is a work in progress and can be found <a href="https://github.com/brulecap/authors/blob/master/books_api_documentation.txt">here</a>. A sample author class can be found <a href="https://github.com/brulecap/authors/blob/master/src/app/author.ts">here</a>.</p>
 				<p>If this was a "real" production API, I would want to control access to the http post, put, and delete methods. This would require https and some form of validation, either requiring a key or a login.</p>
 			</div>
 			<div class="row">
@@ -72,7 +71,5 @@
 			</div>
 		</div>
 {% include "home/footer.html" %}
-{% load static %}
-	<script src="{%static '/home/js/code.js'%}"></script>
 	</body>
 </html>

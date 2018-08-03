@@ -3,6 +3,11 @@
 	opacity: .5;
 }
 
+#sideNav img {
+	width: 60px;
+	vertical-align: top;
+}
+
 #sideNav {
 	background: #181818;
 	width: 60px;
@@ -14,6 +19,7 @@
 }
 
 nav {
+	display: inline-block;
 	margin: 100px 20px;
 }
 

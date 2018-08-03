@@ -1,10 +1,18 @@
 			<div class="row header">
-				<div class="col-4">
-{% load static %}
-					<img src="{%static 'home/images/bruce_sign.png'%}" alt="Bruce Sign">
-				</div>
-				<div class="col-8 align-middle my-auto">
-					<p class="quote">{{quote}}</p>
-					<p class="source">{{source}}</p>
+				<div class="col-12 align-middle">
+					<div class="angles">
+						<i id="previous" class="fas fa-angle-left"></i>
+					</div>
+					<div id="quote_source">
+						<p id="quote"></p>
+						<p id="source"></p>
+					</div>
+					<div class="angles">
+						<i id="next" class="fas fa-angle-right"></i>
+					</div>
 				</div>
 			</div>
+			<script>
+					var quotes = {{ quotes|safe }};
+					var quote_index = Math.floor(Math.random() * Math.floor(quotes.length));
+			</script>

@@ -3,19 +3,22 @@ import random
 # import Quote
 from .models import Quotes
 
-num_quotes = len(Quotes.objects)
+
+quotes = Quotes.objects()
+num_quotes = len(quotes)
+#print(Quotes.objects().to_json())
 
 APP_NAME = 'home'
 
 def about(request):
 	which_quote = random.randint(1,num_quotes)
-	return render(request, APP_NAME + '/about.html', {"home":True, "quote":Quotes.objects[which_quote].quote, "source": Quotes.objects[which_quote].source});
+	return render(request, APP_NAME + '/about.html', {"home":True, "quotes": quotes.to_json()});
 def contact(request):
 	which_quote = random.randint(1,num_quotes)
-	return render(request, APP_NAME + '/contact.html', {"contact":True, "quote":Quotes.objects[which_quote].quote, "source": Quotes.objects[which_quote].source});
+	return render(request, APP_NAME + '/contact.html', {"contact":True, "quotes": quotes.to_json()});
 def code(request):
 	which_quote = random.randint(1,num_quotes)
-	return render(request, APP_NAME + '/code.html', {"code":True, "quote":Quotes.objects[which_quote].quote, "source": Quotes.objects[which_quote].source});
+	return render(request, APP_NAME + '/code.html', {"code":True, "quotes": quotes.to_json()});
 def pacman(request):
 	return render(request, APP_NAME + '/pacman_shell.html');
 def authors_api_doc(request):
