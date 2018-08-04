@@ -1,14 +1,10 @@
 import pymongo
 mongoclient = pymongo.MongoClient("mongodb://localhost:27017/")
 pythondb = mongoclient["python"]
+pythondb.drop_collection("quotes")
 quotes = pythondb["quotes"]
-#source = "testsource"
-#quote = "testquote"
-#mydict = { "quote": quote, "source": source }
 
-#x = quotes.insert_one(mydict)
-
-f = open("quotes.txt")
+f = open("quotes.txt", encoding='utf-8-sig')
 line = 0
 quote = ""
 source = ""
@@ -17,7 +13,6 @@ for x in f:
 		source = x.strip()
 		source = source.strip('()')
 		quotes.insert_one({"quote": quote, "source": source})
-#		print("quote:", quote, "source: ", source)
 	else:
 		quote = x.strip()
 		quote = quote.strip('"')
