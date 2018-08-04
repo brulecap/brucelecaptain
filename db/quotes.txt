@@ -70,7 +70,7 @@
 (Bjarne Stroustrup) 
 "Any fool can use a computer. Many do."
 (Ted Nelson) 
-"There are only two industries that refer to their customers as 'users'."
+"There are only two industries that refer to their customers as 'users': illegal drugs and software."
 (Edward Tufte) 
 "Programmers are in a race with the Universe to create bigger and better idiot-proof programs, while the Universe is trying to create bigger and better idiots. So far the Universe is winning."
 (Rich Cook) 
