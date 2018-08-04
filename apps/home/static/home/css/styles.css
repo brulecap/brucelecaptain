@@ -36,6 +36,7 @@ h2 {
 }
 
 .header {
+	text-align: center;
 	background-color: #3F3F3F;
 }
 
@@ -119,4 +120,11 @@ p {
 #quote_source {
 	display: inline-block;
 	width: 70%;
+	text-align: left;
+}
+
+.name {
+	text-align: center;
+	font-size: 1.8em;
+	margin: 0 0 20px;
 }
