@@ -1,62 +1,70 @@
-.white:before {
+nav li {
+	display: inline-block;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+#quote_source {
+	display: inline-block;
+	width: 70%;
+	text-align: left;
+}
+
+#quote {
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+#source {
+	color: #15784d;
+	font-weight: bold;
+}
+
+.angles {
+	display: inline-block;
+	width: 12%;
+	vertical-align: top;
+}
+
+.angles i {
+	color: white;
+	font-size: 2.0em;
+}
+
+.white::before {
 	color: white;
 	opacity: .5;
 }
 
-#sideNav img {
-	width: 60px;
-	vertical-align: top;
-}
-
-#sideNav {
-	background: #181818;
-	width: 60px;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	z-index: 3;
-	min-height: 500px;
-}
-
-nav {
-	display: inline-block;
-	margin: 100px 20px;
-}
-
-.separator {
+.nav-item {
 	margin: 40px 0 0 0;
 }
 
-@media (max-width: 600px) {
-	#sideNav {
-		width: 100%;
-		height: 60px;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 3;
-		min-height: 0;
-		min-width: 535px;
-	}
-	.nav-item {
-		display: inline-block;
-	}
-	.nav {
-		display: inline-block;
-	}
-	nav {
-		margin: 20px 80px;
-	}
-	.separator {
-		margin: 0 0 0 40px;
-	}
+.fa-angle-left::before {
+	text-align: left;
 }
 
-.fas:hover:before, .fab:hover:before {
+.fa-angle-right::before {
+	text-align: right
+}
+
+.fa-angle-left::before, .fa-angle-right::before {
+	color: white;
+	opacity: .5;
+}
+
+.fa-angle-left:hover::before, .fa-angle-right:hover::before {
 	opacity: 0;
 }
 
-.fas:after, .fab:after {
+.fas:hover::before, .fab:hover::before {
+	opacity: 0;
+}
+
+.fas::after, .fab::after {
 	content: '';
 	font-size: 10px;
 	letter-spacing: 2px;
@@ -71,31 +79,31 @@ nav {
 	font-family: sans-serif;
 }
 
-.fa-home:after {
+.fa-home::after {
 	content: 'Home';
 }
 
-.fa-user:after {
+.fa-user::after {
 	content: 'About';
 }
 
-.fa-code:after {
+.fa-code::after {
 	content: 'Code';
 }
 
-.fa-envelope-open:after {
+.fa-envelope-open::after {
 	content: 'Contact';
 }
 
-.fa-github:after {
+.fa-github::after {
 	content: 'GitHub';
 }
 
-.fa-linkedin-in:after {
+.fa-linkedin-in::after {
 	content: 'Linked In';
 }
 
-.fas:hover:after, .fab:hover:after {
+.fas:hover::after, .fab:hover::after {
 	opacity: 1;
 }
 

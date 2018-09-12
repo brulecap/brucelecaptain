@@ -1,5 +1,18 @@
+{% load static %}
 			<div class="row header">
-				<div class="col-12 align-middle">
+				<div class="col-sm-12  col-md-5">
+					<img id="bruce_sign" src="{%static 'home/images/bruce_sign.png'%}" alt="Bruce Sign">
+					<nav>
+						<ul>
+							<li class="nav-item"><a href="/"><i class="fas fa-home{% if home %}{% else %} white{% endif %}"></i></a></li>
+							<li class="nav-item"><a href="/code"><i class="fas fa-code{% if code %}{% else %} white{% endif %}"></i></a></li>
+							<li class="nav-item"><a href="/contact"><i class="fas fa-envelope-open{% if contact %}{% else %} white{% endif %}"></i></a></li>
+							<li class="nav-item"><a href="https://github.com/brulecap" target="_blank"><i class="fab fa-github white"></i></a></li>
+							<li class="nav-item"><a href="https://www.linkedin.com/in/bruce-lecaptain-533a8241/" target="_blank"><i class="fab fa-linkedin-in white"></i></a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-sm-12 col-md-7 quote_div">
 					<div class="angles">
 						<i id="previous" class="fas fa-angle-left"></i>
 					</div>
@@ -12,7 +25,3 @@
 					</div>
 				</div>
 			</div>
-			<script>
-					var quotes = {{ quotes|safe }};
-					var quote_index = Math.floor(Math.random() * Math.floor(quotes.length));
-			</script>

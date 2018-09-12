@@ -10,3 +10,7 @@
 		<link rel="stylesheet" href="{%static '/home/css/styles.css'%}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/png" href="{%static 'home/images/favicon.ico'%}">
+		<script>
+			var quotes = {{ quotes|safe }};
+			var quote_index = Math.floor(Math.random() * Math.floor(quotes.length));
+		</script>

@@ -5,7 +5,7 @@ body {
 	background-color: #58595B;
 }
 
-h1, h2 {
+h1, h2, figcaption {
 	color: #FFBE00;
 }
 
@@ -18,30 +18,41 @@ h2 {
 }
 
 .container-fluid {
-	margin: 0 0 0 60px;
-	padding: 0;
-	width: 95%;
+	margin: 0;
+	padding: 120px 0 0 0;
 	min-width: 535px;
+}
 
+.header, .detail, #myModal {
+	min-width: 535px;
+}
+
+#bruce_sign {
+	height: 50px;
+	vertical-align: top;
 }
 
 .row {
 	margin-left: 0;
 }
 
-@media (max-width: 600px) {
-	.container-fluid {
-		margin: 60px 0 0 0;
+@media (max-width: 768px) {
+	.quote_div {
+		display: none;
 	}
 }
 
 .header {
+	position: fixed;
+	z-index: 2;
+	width: 100%;
 	text-align: center;
 	background-color: #3F3F3F;
 }
 
 .header div {
-	margin: 0 auto;
+	margin: 0;
+	padding: 0;
 }
 
 .header h1 {
@@ -67,64 +78,28 @@ p {
 	font-size: 1.0em;
 }
 
-#quote {
-	font-style: italic;
-	margin-bottom: 0;
-}
-
-#source {
-	color: #15784d;
-	font-weight: bold;
-}
-
-.angles {
-	display: inline-block;
-	width: 12%;
-}
-
-.angles i {
-	color: white;
-	font-size: 2.5em;
-}
-
-.fa-angle-left:before {
-	text-align: left;
-}
-
-.fa-angle-right:before {
-	text-align: right
-}
-
-.fa-angle-left:before, .fa-angle-right:before {
-	color: white;
+/*
+ * These fa-angle- class definitions should be in navigation.css
+ * For some reason they do not work there??? 
+ */
+.fa-angle-left:hover::after, .fa-angle-right:hover::after {
 	opacity: .5;
 }
 
-.fa-angle-left:hover:before, .fa-angle-right:hover:before {
-	opacity: 0;
-}
-
-.fa-angle-left:hover:after, .fa-angle-right:hover:after {
-	opacity: .5;
-	bottom: 3em;
-}
-
-.fa-angle-left:after {
+.fa-angle-left::after {
 	content: 'Previous';
 }
 
-.fa-angle-right:after {
+.fa-angle-right::after {
 	content: 'Next';
-}
-
-#quote_source {
-	display: inline-block;
-	width: 70%;
-	text-align: left;
 }
 
 .name {
 	text-align: center;
 	font-size: 1.8em;
 	margin: 0 0 20px;
+}
+
+.technologies img {
+	width : 150px;
 }

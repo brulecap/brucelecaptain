@@ -5,10 +5,9 @@
 {% include "home/head.html" %}
 {% load static %}
 	</head>
-	<body>
-{% include "home/nav.html" %}
-		<div class="container-fluid">
 {% include "home/header.html" %}
+	<body>
+		<div class="container-fluid">
 			<div class="bruce_detail detail">
 				<span class="close">&times;</span>
 				<img class="img-fluid" src="{%static 'home/images/bruce_sign.png'%}" alt="Bruce">
@@ -28,7 +27,10 @@
 			</div>
 			<div class="authors_detail detail">
 				<span class="close">&times;</span>
-				<img class="img-fluid" src="{%static 'home/images/stephen_king.jpg'%}" alt="Stephen King">
+				<figure>
+					<img class="img-fluid" src="{%static 'home/images/stephen_king.jpg'%}" alt="Stephen King">
+					<figcaption>Stephen King- The King of horror</figcaption>
+				</figure>
 				<p>Authors is a full MEAN stack application originally developed as an excercise while I was in Coding Dojo's online bootcamp.</p>
 				<p>Deploying the app to brucelecaptain.com was a good learning experience. As with Pacman, I have an nginx server doing a proxy pass to a node server. It worked beautifully in development, but when deployed the node routing fell apart. Figuring out the problems gave me a greater understanding of node routing of an Angular app, and how to have a single version of software "work" in different environments.</p> 
 				<p>Documentation of the API is a work in progress and can be found <a href="https://github.com/brulecap/authors/blob/master/books_api_documentation.txt">here</a>. A sample author class can be found <a href="https://github.com/brulecap/authors/blob/master/src/app/author.ts">here</a>.</p>
