@@ -98,7 +98,7 @@ $(document).ready(function(){
 	function paginate_html(total_items) {
 		// TODO: Commented code would be used to display all books. 
 //		return `<div class="paginate">${(start_index > 0 ? '<a class="prev" href="#"><i id="previous" class="fas fa-angle-left"></i></a>' : '')}${(start_index+MAX_RESULTS < total_items ? '<a class="next" href="#"><i id="next" class="fas fa-angle-right"></i></a>' : '')}${((start_index+MAX_RESULTS < total_items) || (start_index > 0)? '<button id="load_all" type="button">Load all books</button><button id="clear" type="button">Clear search</button>' : '')}</div>`;
-		return `<div class="paginate">${(start_index > 0 ? '<a class="prev" href="#"><i id="previous" class="fas fa-angle-left"></i></a>' : '')}${(start_index+MAX_RESULTS < total_items ? '<a class="next" href="#"><i id="next" class="fas fa-angle-right"></i></a>' : '')}${((start_index+MAX_RESULTS < total_items) || (start_index > 0)? '<button id="clear" type="button">Clear search</button>' : '')}</div>`;
+		return `<div class="paginate row"><div class="col">${(start_index > 0 ? '<a class="prev" href="#"><i id="previous" class="fas fa-angle-left"></i></a>' : '')}${(start_index+MAX_RESULTS < total_items ? '<a class="next" href="#"><i id="next" class="fas fa-angle-right"></i></a>' : '')}${(total_items > 0 ? '<button id="clear" type="button">Clear search</button>' : '')}</div></div>`;
 	}
 
 	/*
