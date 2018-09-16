@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Google Books API</title>
+{% include "home/head.html" %}
+{% load static %}
+		<link rel="stylesheet" href="{%static '/home/css/google_books.css'%}">
+	</head>
+{% include "home/header.html" %}
+	<body>
+		<div class="container-fluid">
+			<div class="form">
+				<form id="google_books_form" action="/">
+					<fieldset>
+						<legend>Search Google's Books API</legend>
+						<label for="inauthor">Author:</label>
+						<input type="text" name="inauthor" id="inauthor" placeholder="Enter author's name"">
+						<label for="intitle">Title:</label>
+						<input type="text" name="intitle" id="intitle" placeholder="Enter title">
+						<input class="btn btn-light btn-sm" type="submit" id="submit_search" value="Search">
+					</fieldset>
+				</form>
+			</div>
+			<div id="books">
+			</div>
+			<div id="description"></div>
+		</div>
+{% include "home/footer.html" %}
+		<script src="/static/home/js/google_books.js"></script>
+	</body>
+</html>

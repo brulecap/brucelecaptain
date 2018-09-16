@@ -5,7 +5,7 @@ body {
 	background-color: #58595B;
 }
 
-h1, h2, figcaption {
+h1, h2, figcaption, label, fieldset, th {
 	color: #FFBE00;
 }
 

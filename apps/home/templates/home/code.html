@@ -36,6 +36,14 @@
 				<p>Documentation of the API is a work in progress and can be found <a href="https://github.com/brulecap/authors/blob/master/books_api_documentation.txt">here</a>. A sample author class can be found <a href="https://github.com/brulecap/authors/blob/master/src/app/author.ts">here</a>.</p>
 				<p>If this was a "real" production API, I would want to control access to the http post, put, and delete methods. This would require https and some form of validation, either requiring a key or a login.</p>
 			</div>
+			<div class="google_books_detail detail">
+				<span class="close">&times;</span>
+				<img class="img-fluid" src="{%static 'home/images/google_books.png'%}"  alt="Google Books API">
+				<h2>Google Books/Authors API (Why create your own when one already exists?)</h2>
+				<p>After writing the authors MEAN app, I figured there had to be a books type API already out there. Sure enough, Google had one. There are a plethora of them, Amazon and ISBNdb to name two others.</p>
+				<p>So, for a fun excercise, I decided to integrate with the Google Books API. It is pretty much a SPA, once the page loads the DOM is populated on the client side using javascript/jQuery. Pretty cool!</p>
+			</div>
+
 			<div class="row">
 				<div class="code-item col-sm-6 col-md-4 col-6">
 					<h2>Welcome to Bruce</h2>
@@ -69,6 +77,13 @@
 						<a class="about" href="#">About</a>
 						<a href="/authors">Visit</a>
 						<a href="https://github.com/brulecap/authors" target="_blank">GitHub</a>
+					</div>
+				</div>
+				<div class=code-item col-sm-6 col-md-4 col-6">
+					<img class="img-fluid" src="{%static 'home/images/google_books.png'%}" alt="Google Books">
+					<div id="google_books" class="links">
+						<a class="about" href="#">About</a>
+						<a href="/google_books">Find a book</a>
 					</div>
 				</div>
 			</div>

@@ -5,6 +5,7 @@ urlpatterns = [
 	url(r'^favicon\.ico$', RedirectView.as_view(url='/static/home/images/favicon.ico')),
 	url(r'^code/', views.code, name="code"),
 	url(r'^contact/', views.contact, name="contact"),
+	url(r'^google_books/', views.google_books, name="google_books"),
 	url(r'^authors_api_doc/', views.authors_api_doc, name="authors_api_doc"),
 	url(r'^$', views.about, name="index")
 ]

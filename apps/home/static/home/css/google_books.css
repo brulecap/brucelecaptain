@@ -1,0 +1,83 @@
+.form {
+	text-align: center;
+	margin-top: 10px;
+	min-width: 535px;
+}
+
+#books {
+	margin: 10px 0 0 20px;
+}
+
+legend {
+	margin-bottom: 20px;
+}
+
+input[type=submit] {
+	margin-left: 10px;
+	vertical-align: top;
+}
+
+th, td {
+	padding: 20px;
+}
+
+td img {
+	height: 125px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	margin: 5px 0;
+}
+
+button {
+	position: absolute;
+	right: 0;
+	margin: 15px 30px 0 0; 
+}
+
+.paginate {
+	margin: 20px 0 0 20px;
+}
+
+.paginate a {
+	margin-right: 30px;
+	font-size: 2.5em;
+}
+
+.fa-angle-left::after, .fa-angle-right::after {
+	font-size: 0.4em;
+	margin-top: -20px;
+}
+
+#description {
+	top: 25%;
+	left: 20%;
+	z-index: 99;
+	display: none;
+	position: fixed;
+	color: black;
+	background: white;
+	width: 75%;
+	border: 1px solid black;
+	border-radius: 25px;
+	padding: 20px;
+}
+
+#description h2 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid black;
+}
+
+.description_text {
+	max-height: 250px;
+	overflow: auto;
+}
+
+.close {
+	color: black;
+}
