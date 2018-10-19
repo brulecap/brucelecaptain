@@ -19,6 +19,8 @@ def contact(request):
 def code(request):
 	which_quote = random.randint(1,num_quotes)
 	return render(request, APP_NAME + '/code.html', {"code":True, "quotes": quotes.to_json()});
+def euler(request):
+	return render(request, APP_NAME + '/euler.html',  {"cool":True, "euler":True, "quotes": quotes.to_json()});
 def google_books(request):
 	which_quote = random.randint(1,num_quotes)
 	return render(request, APP_NAME + '/google_books.html', {"google_books":True, "quotes": quotes.to_json()});

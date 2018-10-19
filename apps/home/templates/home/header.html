@@ -6,7 +6,13 @@
 						<ul>
 							<li class="nav-item"><a href="/"><i class="fas fa-home{% if home %}{% else %} white{% endif %}"></i></a></li>
 							<li class="nav-item"><a href="/code"><i class="fas fa-code{% if code %}{% else %} white{% endif %}"></i></a></li>
-							<li class="nav-item"><a href="/contact"><i class="fas fa-envelope-open{% if contact %}{% else %} white{% endif %}"></i></a></li>
+							<li class="nav-item"><a href="/contact/"><i class="fas fa-envelope-open{% if contact %}{% else %} white{% endif %}"></i></a></li>
+							<li class="nav-item">
+								<i class="fas fa-snowflake{% if cool %}{% else %} white{% endif %}"></i>
+								<ul class="cool_list">
+									<li><a id="euler" {% if euler %}class="current"{% endif %} href="/euler">Euler Project</a></li>
+								</ul>
+							</li>
 							<li class="nav-item"><a href="https://github.com/brulecap" target="_blank"><i class="fab fa-github white"></i></a></li>
 							<li class="nav-item"><a href="https://www.linkedin.com/in/bruce-lecaptain-533a8241/" target="_blank"><i class="fab fa-linkedin-in white"></i></a></li>
 						</ul>
