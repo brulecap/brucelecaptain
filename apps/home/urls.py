@@ -10,5 +10,3 @@ urlpatterns = [
 	url(r'^authors_api_doc/', views.authors_api_doc, name="authors_api_doc"),
 	url(r'^$', views.about, name="index")
 ]
-
-#	url(r'^euler/', views.euler, name="euler"),

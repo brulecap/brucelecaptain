@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Bruce's Code/Portfolio</title>
-        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 {% include "home/head.html" %}
 {% load static %}
         <link rel="stylesheet" href="{%static '/home/css/cool.css'%}">
     </head>
-{% include "home/header.html" %}
     <body>
+{% include "home/header.html" %}
         <div class="container-fluid">
             <div class="row">
                 <div id="home-text" class="col-12">
                     <h2>Euler Project</h2>
                     <p>I discovered the <a href="https://projecteuler.net" target="blank">Euler Project</a> while searching for challenges to strengthen my coding skills and have a bit of fun. It has a wealth of challenges/problems which appealed to this math guy's brain.</p>
-                    <p>Before I got started, I needed to decide what language I was going to use. I choose the c programming language. I have enjoyed coding in c and I had not used it in awhile. I had been working in php and I wanted to work with a compiled language again. So I grabbed the <a href="https://www.eclipse.org/downloads/packages/" target="blank">Eclipse IDE for C/C++ Developers</a> and a c compiler. I choose <a href="mingw.org" target="blank">MinGW</a> for my Windows machine and got started.</p>
-                    <p>I quickly learned that c was a perfect choice for the challenges. Why? Continue reading and I'll try to explain. Some problems, like power digit sum, require just a few lines of code in python. But when written in c, the problem takes on a whole new dimension.</p>
+                    <p>Before I got started, I needed to decide what language I was going to use. I choose the c programming language. I have enjoyed coding in C and I had not used it in awhile. I had been working in php and I wanted to work with a compiled language again. So I grabbed the <a href="https://www.eclipse.org/downloads/packages/" target="blank">Eclipse IDE for C/C++ Developers</a> and a C compiler. I choose <a href="mingw.org" target="blank">MinGW</a> for my Windows machine and got started.</p>
+                    <p>I quickly learned that C was a perfect choice for the challenges. Why? Continue reading and I'll try to explain.</p>
+                    <p>Some problems, like power digit sum, require just a few lines of code in python. But when written in c, the problem takes on a whole new dimension.</p>
                     <p>The power digit sum problem asks you to find the sum of all digits of <var>2<sup>1000</sup></var>.</p>
                     <p>This problem has a trivial solution in python:</p>
-<pre class="prettyprint"><xmp>r = 2**1000
+<pre class="prettyprint">r = 2**1000
 sum = 0
 for i in range(0, len(str(r))):
     sum += int(str(r)[i])
-print(sum)</xmp></pre>
+print(sum)</pre>
                     <p>Running that we find that the sum of all the digits of <var>2<sup>1000</sup></var> is <var>1366</var>.</p>
-                    <p>Thinking we could do something similar in c (As I said, it had been awhile since I had programmed in c), I tried this:</p>
-<pre class="prettyprint code"><xmp>
+                    <p>Thinking we could do something similar in C (As I said, it had been awhile since I had programmed in C), I tried the following function:</p>
+<pre class="prettyprint code">
 long long power_digit_sum_easy(int number, int exponent) {
   long long number_exponent = pow(number,exponent), sum = 0;
   int array_size = 1;
@@ -41,7 +42,7 @@ long long power_digit_sum_easy(int number, int exponent) {
   // char array to hold digits in number_exponent.
   char num_as_chars[array_size];
   sprintf(num_as_chars, "%I64d", number_exponent);
-  for (int i=0;i<array_size;i++) {
+  for (int i=0;i&lt;array_size;i++) {
     // Check if digit
     if (isdigit(num_as_chars[i])) {
       /*
@@ -54,14 +55,14 @@ long long power_digit_sum_easy(int number, int exponent) {
     }
   }
   return(sum);
-}</xmp></pre>
+}</pre>
                     <p>Now that doesn't look too bad. A large part of the program consists of comments. It works great with something like <var>2<sup>50</sup></var> which has an answer of <var>76</var>.</p>
                     <p>But when I ran this program with <var>2<sup>1000</sup></var> I get the answer <var>89</var>. That's not right! What's going on?</p>
-                    <p>Well, the problem lies in the size of the number. <var>2<sup>1000</sup></var> is 31 digits long. That exceeds the maximum size of any primitive data type in c. The largest, <var>2<sup>64</sup>-1</var>, is an unsigned long long.</p>
+                    <p>Well, the problem lies in the size of the number. <var>2<sup>1000</sup></var> is 31 digits long. That exceeds the maximum size of any primitive data type in C. The largest, <var>2<sup>64</sup>-1</var>, is an unsigned long long.</p>
                     <p>At this point you might say screw it. I'll just write it in python. But then you wouldn't have as much fun and would miss out on a fantastic learning experience.</p>
                     <p>So what do you do? Hint: Is there a problem having an array with 31 entries? Or 1000, or 2000, or ??? You can represent some extremely large numbers using arrays. Cool stuff!!!!</p>
-                    <p>My solution follows. It is by no means the only way to solve this in c. I have seen a number of different solutions. Some, I must admit, more elegant. But you give 10 programmers 1 problem and they will come up with 19 different solutions.</p> 
-<pre class="prettyprint code"><xmp>/*
+                    <p>My solution follows. It is by no means the only way to solve this in C. I have seen a number of different solutions. Some, I must admit, more elegant. But you give 10 programmers 1 problem and they will come up with 19 different solutions.</p> 
+<pre class="prettyprint code">/*
  * Function power_digit_sum finds the sum of the digits of the number x^n.
  *
  * Example: 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
@@ -74,7 +75,7 @@ long long power_digit_sum_easy(int number, int exponent) {
  *      int number - Number to raise to power
  *      int exponent - Power to raise number
  *
- * TODO: Currently this function will only handle carry + product < 100.
+ * TODO: Currently this function will only handle carry + product &lt; 100.
  *       Need to modify function to propagate carries as far up the line
  *       as necessary.
  *       Example: 25^2
@@ -104,8 +105,8 @@ long long power_digit_sum(int number, int exponent) {
    * are complete you wil have the digits of x^n contained in an array with the
    * array index 0 being the least significant digit.
    */
-  for (i=0;i<exponent;i++) {
-    for (j=0;j<array_size;j++) {
+  for (i=0;i&lt;exponent;i++) {
+    for (j=0;j&lt;array_size;j++) {
       product_array[j] = (product_array[j] * number) + carry;
       carry = 0;
       if (product_array[j] > 9) {
@@ -119,7 +120,8 @@ long long power_digit_sum(int number, int exponent) {
     sum += product_array[i];
   }
   return sum;
-}</xmp></pre> 
+}</pre> 
+                    <p>One final thought: C has been listed in the top 2 of the <a href="https://www.tiobe.com/tiobe-index/" target="blank">TIOBE Programming Community Index</a> since at least 2002. Kunal Chaudhari has an article, <a href="https://hub.packtpub.com/why-does-the-c-programming-language-refuse-to-die/" target="blank">Why does the C programming language refuse to die?</a>. It is definitely worth reading.</p>
                 </div>
             </div>
         </div>
