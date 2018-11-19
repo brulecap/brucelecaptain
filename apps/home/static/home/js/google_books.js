@@ -6,7 +6,7 @@ $(document).ready(function(){
 	let start_index = 0;
 	let q = ""
 
-	$("#submit_search").on("click", function() {
+	$("#submit_search").on("click", function(e) {
 		start_index = 0;
 		q = get_query_string($("#google_books_form").serializeArray());
 		if (q !== "") {
@@ -14,7 +14,7 @@ $(document).ready(function(){
 		} else {
 			$("#books").html('<p class="text-warning">Searching for nothing would be a waste of time. Please fill in one of the fields above and try again.</p>');
 		}
-		event.preventDefault();
+		e.preventDefault();
 	});
 	$("#books").on("click", ".img_cell", function(e) {
 		$('#description').html(descriptions[this.id]);
